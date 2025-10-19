@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarvam Chat Widget - Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .feature-icon {
+            font-size: 24px;
+            margin-right: 12px;
+        }
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Sarvam Chat Widget Demo</h1>
+        <p>This is a test page for the embeddable chat widget. The widget should appear in the bottom-right corner.</p>
+        
+        <div class="card">
+            <h2>✨ Features</h2>
+            <div class="feature">
+                <span class="feature-icon">💬</span>
+                <span>Real-time chat interface</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🎤</span>
+                <span>Voice input with speech recognition</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🔊</span>
+                <span>Text-to-speech for responses</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🌍</span>
+                <span>Multi-language support</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🎨</span>
+                <span>Fully customizable appearance</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">📱</span>
+                <span>Responsive design</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔧 Configuration</h2>
+            <p>The widget is configured via <code>window.AgentWidgetConfig</code>. Check the source of this page to see the configuration options.</p>
+        </div>
+
+        <div class="card">
+            <h2>📝 Instructions</h2>
+            <ol>
+                <li>Click the chat bubble in the bottom-right corner</li>
+                <li>Try sending a message</li>
+                <li>Use the microphone button for voice input (requires browser support)</li>
+                <li>Click the speaker icon on assistant messages to hear them</li>
+                <li>Switch languages using the dropdown in the header</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Widget Configuration -->
+    <script>
+        window.AgentWidgetConfig = {
+            // API Configuration
+            apiEndpoint: '/api/chat', // Your backend endpoint
+            
+            // Appearance
+            primaryColor: '#6366f1',
+            position: 'bottom-right', // 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left'
+            bubbleIcon: '💬',
+            
+            // Language
+            defaultLanguage: 'en-US',
+            supportedLanguages: [
+                { code: 'en-US', name: 'English' },
+                { code: 'hi-IN', name: 'हिंदी' },
+                { code: 'ta-IN', name: 'தமிழ்' },
+                { code: 'te-IN', name: 'తెలుగు' },
+                { code: 'bn-IN', name: 'বাংলা' },
+                { code: 'mr-IN', name: 'मराठी' },
+                { code: 'gu-IN', name: 'ગુજરાતી' },
+                { code: 'kn-IN', name: 'ಕನ್ನಡ' },
+            ],
+            
+            // Labels & Text
+            welcomeMessage: 'Hello! How can I help you today?',
+            placeholder: 'Type your message...',
+            headerTitle: 'Chat Assistant',
+            
+            // Features
+            enableVoice: true,
+            enableLanguageSwitcher: true,
+            
+            // Context
+            context: 'You are a helpful customer support assistant for Sarvam AI.',
+        };
+    </script>
+
+    <!-- Load the widget (in development, use /src/main.tsx; in production, use /dist/widget.js) -->
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- For production, use this instead: -->
+    <!-- <script src="/dist/widget.js"></script> -->
+</body>
+</html>
