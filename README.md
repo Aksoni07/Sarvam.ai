@@ -1,6 +1,8 @@
 # Sarvam Chat Widget
 
-Notion Document: https://www.notion.so/Sarvam-Chat-Widget-Complete-Overview-cabe254efc3f4c3891074592c0f7628e?source=copy_link
+Notion Document : 
+  A. [Brief](https://tinyurl.com/bde8hf3x)
+  B. [Detailed](https://tinyurl.com/2szsjfpu)
 
 A production-ready, embeddable chat widget with voice capabilities built with React, TypeScript, and Vite. Features Shadow DOM encapsulation, multi-language support, and voice input/output.
 
