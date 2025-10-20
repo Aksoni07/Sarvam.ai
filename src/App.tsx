@@ -5,7 +5,7 @@ import { Widget } from './components/Widget';
 const App: React.FC = () => {
   return (
     <ConfigProvider>
-      <Widget />
+      <Widget/>
     </ConfigProvider>
   );
 };
